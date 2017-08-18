@@ -143,18 +143,18 @@ cd
 #	screen -D -r
 #else
 if [ "$SHLVL" -gt 4 ]; then
-	function ssh() {
-		hname=${1##*@}
-		echo -n -e "\033k$hname\033\\"
-		$(which ssh) $@
-		echo -n -e "\033k`hostname`\033\\"
-	}
+    function ssh() {
+        hname=${1##*@}
+        echo -n -e "\033k$hname\033\\"
+        $(which ssh) $@
+        echo -n -e "\033k`hostname`\033\\"
+    }
 
-	function telnet() {
-		echo -n -e "\033k$1\033\\"
-		$(which telnet) $@
-		echo -n -e "\033k`hostname`\033\\"
-	}
+    function telnet() {
+        echo -n -e "\033k$1\033\\"
+        $(which telnet) $@
+        echo -n -e "\033k`hostname`\033\\"
+    }
 
   echo -n -e "\033k`hostname`\033\\"
 fi
