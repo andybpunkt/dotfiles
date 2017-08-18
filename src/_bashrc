@@ -170,6 +170,4 @@ fi
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/bin/gvm-init.sh" && -z $(which gvm-init.sh | grep '/gvm-init.sh') ]] && source "${HOME}/.gvm/bin/gvm-init.sh"
 
-if [ $(which direnv) != "" ]; then
-    eval "$(direnv hook bash)"
-fi
+direnv help >/dev/null 2>&1 && eval "$(direnv hook bash)"
