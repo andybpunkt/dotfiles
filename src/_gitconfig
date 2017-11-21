@@ -35,8 +35,8 @@
 [rerere]
   enabled = true
 [user]
-  name = Sven Strittmatter
-  email = sven.strittmatter@iteratec.de
+  name = Andreas Blezu
+  email = andreas.blezu@iteratec.de
 [alias]
   # SVN like shortcuts.
   ci = commit
